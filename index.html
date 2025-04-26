@@ -1,173 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christopher Rauch - Personal Website</title>
+    <title>Christopher Rauch - Professional Profile</title>
+    <meta name="description"
+        content="Christopher Rauch is a versatile technology professional with expertise in software development, information science, and legal background.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&family=Source+Code+Pro&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/additional.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/language.js" defer></script>
 </head>
+
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
-            <h1>Christopher Rauch</h1>
-            <p>Researching Algorithmic Ethics</p>
+            <div class="header-content">
+                <div class="site-title">
+                    <a href="index.html">Christopher Rauch</a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+                    <!-- Language Toggle -->
+                    <div class="language-toggle">
+                        <button data-language="en" class="active">EN</button>
+                        <button data-language="de">DE</button>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
+    <!-- Main Content -->
     <main class="main-content">
         <div class="container">
+            <!-- Profile Section -->
             <section id="about" class="profile-section">
                 <img src="images/IMG_0053.jpg" alt="Christopher Rauch" class="profile-image">
                 <div class="profile-details">
-                    <h2 class="section-title">About Me</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                    anim id est laborum. If you've got this far I'll admit that Claude made the site for me and I am in
-                    the process or running my updates by him.</p>
-                    
+                    <h1 class="section-title">Christopher Rauch</h1>
+                    <p class="profile-subtitle">PhD Candidate in Information Science | Software Developer | Legal
+                        Background</p>
+                    <p>Versatile technology professional with expertise in software development, information science,
+                        and law. Combining advanced technical skills with research experience in algorithmic
+                        decision-making, metadata systems, and ethical AI.</p>
+
+                    <p>My research focuses on ethical decision modeling with AI methods and domain-specific algorithmic
+                        decision-making. With backgrounds in software development, information science, and law, I bring
+                        a multidisciplinary perspective to technology challenges.</p>
+
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/chris2187/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/chris2187/" target="_blank"><i class="fab fa-linkedin"></i>
+                            LinkedIn</a>
                         <a href="https://github.com/cr625" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://orcid.org/0000-0003-2061-3413" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
-                        <a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                        <a href="https://orcid.org/0000-0003-2061-3413" target="_blank"><i class="fab fa-orcid"></i>
+                            ORCID</a>
+                        <a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en" target="_blank"><i
+                                class="fas fa-graduation-cap"></i> Google Scholar</a>
                     </div>
-                    
+
                     <div class="contact-info">
                         <h3>Contact Information</h3>
-                        <p><i class="fas fa-envelope"></i> Academic: <a href="mailto:cr625@drexel.edu">cr625@drexel.edu</a></p>
-                        <p><i class="fas fa-envelope"></i> Personal: <a href="mailto:christopher.b.rauch@gmail.com">christopher.b.rauch@gmail.com</a></p>
+                        <p><i class="fas fa-envelope"></i> Email: <a
+                                href="mailto:christopher.rauch@ieee.org">christopher.rauch@ieee.org</a></p>
                     </div>
                 </div>
             </section>
 
-            <div class="two-column-layout">
-                <section id="cv" class="left-column">
-                    <h2 class="section-title">Education & Experience</h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>Ph.D. in Computer Science</h3>
-                                <p class="timeline-date">Present</p>
-                                <p>Drexel University</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>M.S. in Information Systems (MSIS)</h3>
-                                <p>Drexel University</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>M.S. in Library and Information Science (MSLIS)</h3>
-                                <p>Drexel University</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>J.D. (Juris Doctor)</h3>
-                                <p>Rutgers School of Law</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>Military Service</h3>
-                                <p>U.S. Army, NJ Army National Guard</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            <!-- Experience Section -->
+            <section id="experience" class="section">
+                <h2 class="section-title">Experience Highlights</h2>
 
-                <section id="projects" class="right-column">
-                    <h2 class="section-title">Projects</h2>
-                    <div class="projects-list">
-                        <div class="project-card">
-                            <h3>ProEthica</h3>
-                            <p>An LLM-based ethical decision-making framework incorporating domain ontologies and role-based ethics for precise reasoning about entities, relationships, and professional guidelines.</p>
-                            <p>Using domain ontologies to create structured knowledge, ProEthica evaluates decisions through professional roles bound by specific guidelines. It combines ontological reasoning with LLM capabilities via Model Context Protocol to ensure valid input/output structures and enhance ethical reasoning with structured domain knowledge.</p>
-                            <div class="project-links">
-                                <a href="https://proethica.org/" target="_blank">ProEthica.org</a>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <h3>Ethical AI Research</h3>
-                            <p>Research focused on the intersection of ethics and artificial intelligence, particularly in applications with societal impact.</p>
-                            <div class="project-links">
-                                <a href="https://orcid.org/0000-0003-2061-3413" target="_blank">ORCID Publications</a>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <h3>ITM (In The Moment)</h3>
-                            <p>Worked on Trusted Algorithmic Decision Maker (TAD) for the program.</p>
-                            <div class="project-links">
-                                <a href="https://www.darpa.mil/research/programs/in-the-moment" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <h3>YAMZ</h3>
-                            <p>Yet Another Metadata Zoo - A community-driven vocabulary platform for creating and sharing metadata terms and definitions across domains.</p>
-                            <div class="project-links">
-                                <a href="https://yamz.net/" target="_blank">YAMZ.net</a>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <h3>Web Ads Analysis</h3>
-                            <p>Research on targeted advertising behavior and privacy implications, with focus on algorithmic transparency and ethical considerations.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/cr625" target="_blank">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - Present</div>
+                    <h3 class="timeline-title">Research Fellow</h3>
+                    <div class="timeline-organization">Drexel University</div>
+                    <p>Contributing to DARPA "In the Moment" program focused on algorithmic decision-making in difficult
+                        scenarios. Developing output descriptions for AI decisions, integrating case-based reasoning
+                        systems with large language models, and assessing alignment between AI and human
+                        decision-makers.</p>
+                </div>
 
-                </section>
-            </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2016 - 2020</div>
+                    <h3 class="timeline-title">ISO Consultant</h3>
+                    <div class="timeline-organization">American Precision Company</div>
+                    <p>Developed software to automate ISO conformance task requirements and integrated legacy systems
+                        with .NET based product and various APIs including QuickBooks, FedEx, and USPS.</p>
+                </div>
 
-            <section id="contact">
-                <h2 class="section-title">Contact Me</h2>
-                <p>Feel free to reach out if you have any questions or would like to collaborate on research or projects.</p>
+                <div class="timeline-item">
+                    <div class="timeline-date">2012 - 2014</div>
+                    <h3 class="timeline-title">Consultant</h3>
+                    <div class="timeline-organization">New York State Division of Homeland Security</div>
+                    <p>Developed user manuals and standard operating procedures for communications integration equipment.
+                        Worked with NYSDHS Office of Interoperable and Emergency Communications.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2010 - 2012</div>
+                    <h3 class="timeline-title">Consultant</h3>
+                    <div class="timeline-organization">Growth Transitions Inc (Maher and Maher)</div>
+                    <p>Enhanced ASP and ASP.NET legacy applications, improved MSQL database structure, and developed
+                        SharePoint web parts to integrate with C# ASP.NET content management system.</p>
+                </div>
+            </section>
+
+            <!-- Research Section -->
+            <section id="research" class="section">
+                <h2 class="section-title">Recent Research</h2>
+
+                <div class="publication">
+                    <h3 class="publication-title">Aligning to Human Decision-Makers in Military Medical Triage</h3>
+                    <p class="publication-authors">Molineaux, M., Weber, R. O., Floyd, M. W., Menager, D., Larue, O., Addison, U., Kulhanek, R., Reifsnyder, N., Rauch, C., et al. (2024)</p>
+                    <p class="publication-source">Case-Based Reasoning Research and Development, 371-387</p>
+                    <a href="https://doi.org/10.1007/978-3-031-63646-2_24" class="publication-link"
+                        target="_blank">https://doi.org/10.1007/978-3-031-63646-2_24</a>
+                </div>
+
+                <div class="publication">
+                    <h3 class="publication-title">Counterfactual-Based Synthetic Case Generation</h3>
+                    <p class="publication-authors">Sen, A., Mainali, M., Rauch, C. B., Addison, U., Floyd, M. W., Goel, P., et al. (2024)</p>
+                    <p class="publication-source">Case-Based Reasoning Research and Development, 388-403</p>
+                    <a href="https://doi.org/10.1007/978-3-031-63646-2_25" class="publication-link"
+                        target="_blank">https://doi.org/10.1007/978-3-031-63646-2_25</a>
+                </div>
                 
+                <div class="publication">
+                    <h3 class="publication-title">Beyond the 'Idols of the Marketplace': Managing Semantic Change in Research</h3>
+                    <p class="publication-authors">Rauch, C. B., Poole, A. H., Choi, H. W., & Kelly, M. (2024)</p>
+                    <p class="publication-source">Proceedings from the Document Academy, 11(2), 3</p>
+                    <a href="#" class="publication-link"
+                        target="_blank">Coming Soon</a>
+                </div>
+
+                <div class="publication">
+                    <h3 class="publication-title">Archiving and Replaying Current Web Advertisements: Challenges and Opportunities</h3>
+                    <p class="publication-authors">Reid, T., Poole, A. H., Choi, H. W., Rauch, C., Kelly, M., Nelson, M. L., & Weigle, M. C. (2025)</p>
+                    <p class="publication-source">arXiv preprint arXiv:2502.01525</p>
+                    <a href="https://arxiv.org/abs/2502.01525" class="publication-link"
+                        target="_blank">https://arxiv.org/abs/2502.01525</a>
+                </div>
+
+                <div class="publication">
+                    <h3 class="publication-title">Algorithmic Decision-Making in Difficult Scenarios</h3>
+                    <p class="publication-authors">Rauch, C. B., Addison, U., Floyd, M., Goel, P., Karneeb, J.,
+                        Kulhanek, R., et al. (2024)</p>
+                    <p class="publication-source">Proceedings of the AAAI Symposium Series, 3(1), 583-585</p>
+                    <a href="https://doi.org/10.1609/aaaiss.v3i1.31285" class="publication-link"
+                        target="_blank">https://doi.org/10.1609/aaaiss.v3i1.31285</a>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section">
+                <h2 class="section-title">Key Skills</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming & Web</h3>
+                        <ul class="skill-list">
+                            <li>C#, Java, JavaScript, VB.NET</li>
+                            <li>Python, R, C++</li>
+                            <li>ASP.NET, HTML, CSS, XML/RDF</li>
+                            <li>SharePoint, Web Parts, JSON, XSLT</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Database & Integration</h3>
+                        <ul class="skill-list">
+                            <li>SQL Server, MS Access, FileMaker</li>
+                            <li>Google Maps API, Google Search API</li>
+                            <li>QuickBooks API, Adobe Connect</li>
+                            <li>FedEx/USPS APIs, Web Services</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Research Methods</h3>
+                        <ul class="skill-list">
+                            <li>Machine Learning</li>
+                            <li>Natural Language Processing</li>
+                            <li>Statistical Analysis (R)</li>
+                            <li>Case-Based Reasoning</li>
+                            <li>Agile Development Methodologies</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Additional Skills</h3>
+                        <ul class="skill-list">
+                            <li>German (Professional Working Proficiency)</li>
+                            <li>Project Management</li>
+                            <li>Legal Research and Writing</li>
+                            <li>Military Communications Systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-list">
+                    <div class="project-card">
+                        <h3>ProEthica</h3>
+                        <p>An LLM-based ethical decision-making framework incorporating domain ontologies and role-based
+                            ethics for precise reasoning about entities, relationships, and professional guidelines.</p>
+                        <p>Using domain ontologies to create structured knowledge, ProEthica evaluates decisions through
+                            professional roles bound by specific guidelines. It combines ontological reasoning with LLM
+                            capabilities via Model Context Protocol to ensure valid input/output structures and enhance
+                            ethical reasoning with structured domain knowledge.</p>
+                        <div class="project-links">
+                            <a href="https://proethica.org/" target="_blank">ProEthica.org</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>ITM (In The Moment)</h3>
+                        <p>Worked on Trusted Algorithmic Decision Maker (TAD) for the program.</p>
+                        <div class="project-links">
+                            <a href="https://www.darpa.mil/research/programs/in-the-moment" target="_blank">DARPA
+                                Project Page</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                    <h3>YAMZ</h3>
+                    <p>Yet Another Metadata Zoo - A community-driven vocabulary platform for creating and sharing
+                    metadata terms and definitions across domains. Led development of this metadata dictionary project as part of the California Digital Library's LEADS fellowship program.</p>
+                    <div class="project-links">
+                    <a href="https://yamz.net/" target="_blank">YAMZ.net</a>
+                    </div>
+                    </div>
+                
+                <div class="project-card">
+                    <h3>ISO Automation System (2016-2020)</h3>
+                    <p>Developed software to automate ISO conformance task requirements and integrated legacy systems with .NET based solution for manufacturing quality control. Created integrations with QuickBooks, FedEx, and USPS APIs for seamless business operations.</p>
+                </div>
+                </div>
+            </section>
+
+            <!-- CV Download Section -->
+            <section id="cv-downloads" class="download-section">
+                <h2 class="text-center">Download CV</h2>
+                <p class="text-center">Choose the CV version that best fits your interests</p>
+
+                <div class="download-cards">
+                    <div class="download-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h4>Master CV</h4>
+                        <p>Comprehensive CV with all experience and skills</p>
+                        <a href="downloads/christopher-rauch-cv.pdf"
+                            onclick="trackDownload('master', 'en')">Download</a>
+                    </div>
+
+                    <div class="download-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Technical CV</h4>
+                        <p>IT and software development focused</p>
+                        <a href="downloads/christopher-rauch-technical-cv.pdf"
+                            onclick="trackDownload('technical', 'en')">Coming Soon</a>
+                    </div>
+
+                    <div class="download-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Academic CV</h4>
+                        <p>Research and teaching focused</p>
+                        <a href="downloads/christopher-rauch-academic-cv.pdf"
+                            onclick="trackDownload('academic', 'en')">Coming Soon</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <h2 class="section-title">Contact Me</h2>
+                <p>Feel free to reach out if you have any questions or would like to collaborate on research or
+                    projects.</p>
+
                 <div class="contact-details">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3>Email</h3>
-                            <p>Academic: <a href="mailto:cr625@drexel.edu">cr625@drexel.edu</a></p>
-                            <p>Personal: <a href="mailto:christopher.b.rauch@gmail.com">christopher.b.rauch@gmail.com</a></p>
+                            <p>Email: <a href="mailto:christopher.rauch@ieee.org">christopher.rauch@ieee.org</a></p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
                         <div>
                             <h3>LinkedIn</h3>
-                            <p><a href="https://www.linkedin.com/in/chris2187/" target="_blank">linkedin.com/in/chris2187</a></p>
+                            <p><a href="https://www.linkedin.com/in/chris2187/"
+                                    target="_blank">linkedin.com/in/chris2187</a></p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <i class="fab fa-github"></i>
                         <div>
@@ -175,20 +338,22 @@
                             <p><a href="https://github.com/cr625" target="_blank">github.com/cr625</a></p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <i class="fab fa-orcid"></i>
                         <div>
                             <h3>ORCID</h3>
-                            <p><a href="https://orcid.org/0000-0003-2061-3413" target="_blank">0000-0003-2061-3413</a></p>
+                            <p><a href="https://orcid.org/0000-0003-2061-3413" target="_blank">0000-0003-2061-3413</a>
+                            </p>
                         </div>
                     </div>
-                    
+
                     <div class="contact-item">
                         <i class="fas fa-graduation-cap"></i>
                         <div>
                             <h3>Google Scholar</h3>
-                            <p><a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en" target="_blank">Google Scholar Profile</a></p>
+                            <p><a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en"
+                                    target="_blank">Google Scholar Profile</a></p>
                         </div>
                     </div>
                 </div>
@@ -196,10 +361,36 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Christopher Rauch. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/chris2187/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/cr625" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://orcid.org/0000-0003-2061-3413" target="_blank"><i class="fab fa-orcid"></i></a>
+                    <a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en" target="_blank"><i
+                            class="fas fa-graduation-cap"></i></a>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 Christopher Rauch. Last updated April 26, 2025. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 </body>
+
 </html>
