@@ -26,6 +26,37 @@
     <!-- Scripts -->
     <script src="js/main.js" defer></script>
     <script src="js/language.js" defer></script>
+    <script>
+        // Hamburger menu toggle logic
+        document.addEventListener('DOMContentLoaded', function () {
+            var mobileToggle = document.getElementById('mobileMenuToggle');
+            var mobileNav = document.getElementById('mobileNav');
+            var desktopNav = document.getElementById('desktopNav');
+            mobileToggle.addEventListener('click', function () {
+                if (mobileNav.style.display === 'none' || mobileNav.style.display === '') {
+                    mobileNav.style.display = 'block';
+                    desktopNav.style.display = 'none';
+                } else {
+                    mobileNav.style.display = 'none';
+                    desktopNav.style.display = '';
+                }
+            });
+            // Optional: Hide mobile nav on resize to desktop
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 900) {
+                    mobileNav.style.display = 'none';
+                    desktopNav.style.display = '';
+                }
+            });
+        });
+
+        // Dummy language switcher for EN (if needed)
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -38,12 +69,12 @@
                 </div>
 
                 <!-- Mobile Menu Toggle -->
-                <div class="mobile-menu-toggle">
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
                     <i class="fas fa-bars"></i>
                 </div>
 
                 <!-- Desktop Navigation -->
-                <nav class="desktop-nav">
+                <nav class="desktop-nav" id="desktopNav">
                     <ul>
                         <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -53,12 +84,29 @@
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
-
-                    <!-- Language Toggle -->
                     <div class="language-toggle">
-                        <button data-language="en" class="active">EN</button>
-                        <button data-language="de">DE</button>
+                        <button data-language="en" class="active" onclick="switchLanguage('en')">EN</button>
+                        <a href="de/index.html" data-language="de" id="deLangBtn">DE</a>
                     </div>
+                </nav>
+
+                <!-- Mobile Navigation (hidden by default) -->
+                <nav class="mobile-nav" id="mobileNav" style="display:none;">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li>
+                            <div class="language-toggle">
+                                <button data-language="en" class="active" onclick="switchLanguage('en')">EN</button>
+                                <a href="de/index.html" data-language="de" id="deLangBtnMobile">DE</a>
+                            </div>
+                        </li>
+                    </ul>
                 </nav>
             </div>
         </div>
@@ -126,7 +174,8 @@
                     <div class="timeline-date">2012 - 2014</div>
                     <h3 class="timeline-title">Consultant</h3>
                     <div class="timeline-organization">New York State Division of Homeland Security</div>
-                    <p>Developed user manuals and standard operating procedures for communications integration equipment.
+                    <p>Developed user manuals and standard operating procedures for communications integration
+                        equipment.
                         Worked with NYSDHS Office of Interoperable and Emergency Communications.</p>
                 </div>
 
@@ -145,7 +194,8 @@
 
                 <div class="publication">
                     <h3 class="publication-title">Aligning to Human Decision-Makers in Military Medical Triage</h3>
-                    <p class="publication-authors">Molineaux, M., Weber, R. O., Floyd, M. W., Menager, D., Larue, O., Addison, U., Kulhanek, R., Reifsnyder, N., Rauch, C., et al. (2024)</p>
+                    <p class="publication-authors">Molineaux, M., Weber, R. O., Floyd, M. W., Menager, D., Larue, O.,
+                        Addison, U., Kulhanek, R., Reifsnyder, N., Rauch, C., et al. (2024)</p>
                     <p class="publication-source">Case-Based Reasoning Research and Development, 371-387</p>
                     <a href="https://doi.org/10.1007/978-3-031-63646-2_24" class="publication-link"
                         target="_blank">https://doi.org/10.1007/978-3-031-63646-2_24</a>
@@ -153,23 +203,26 @@
 
                 <div class="publication">
                     <h3 class="publication-title">Counterfactual-Based Synthetic Case Generation</h3>
-                    <p class="publication-authors">Sen, A., Mainali, M., Rauch, C. B., Addison, U., Floyd, M. W., Goel, P., et al. (2024)</p>
+                    <p class="publication-authors">Sen, A., Mainali, M., Rauch, C. B., Addison, U., Floyd, M. W., Goel,
+                        P., et al. (2024)</p>
                     <p class="publication-source">Case-Based Reasoning Research and Development, 388-403</p>
                     <a href="https://doi.org/10.1007/978-3-031-63646-2_25" class="publication-link"
                         target="_blank">https://doi.org/10.1007/978-3-031-63646-2_25</a>
                 </div>
-                
+
                 <div class="publication">
-                    <h3 class="publication-title">Beyond the 'Idols of the Marketplace': Managing Semantic Change in Research</h3>
+                    <h3 class="publication-title">Beyond the 'Idols of the Marketplace': Managing Semantic Change in
+                        Research</h3>
                     <p class="publication-authors">Rauch, C. B., Poole, A. H., Choi, H. W., & Kelly, M. (2024)</p>
                     <p class="publication-source">Proceedings from the Document Academy, 11(2), 3</p>
-                    <a href="#" class="publication-link"
-                        target="_blank">Coming Soon</a>
+                    <a href="#" class="publication-link" target="_blank">Coming Soon</a>
                 </div>
 
                 <div class="publication">
-                    <h3 class="publication-title">Archiving and Replaying Current Web Advertisements: Challenges and Opportunities</h3>
-                    <p class="publication-authors">Reid, T., Poole, A. H., Choi, H. W., Rauch, C., Kelly, M., Nelson, M. L., & Weigle, M. C. (2025)</p>
+                    <h3 class="publication-title">Archiving and Replaying Current Web Advertisements: Challenges and
+                        Opportunities</h3>
+                    <p class="publication-authors">Reid, T., Poole, A. H., Choi, H. W., Rauch, C., Kelly, M., Nelson, M.
+                        L., & Weigle, M. C. (2025)</p>
                     <p class="publication-source">arXiv preprint arXiv:2502.01525</p>
                     <a href="https://arxiv.org/abs/2502.01525" class="publication-link"
                         target="_blank">https://arxiv.org/abs/2502.01525</a>
@@ -260,18 +313,21 @@
                     </div>
 
                     <div class="project-card">
-                    <h3>YAMZ</h3>
-                    <p>Yet Another Metadata Zoo - A community-driven vocabulary platform for creating and sharing
-                    metadata terms and definitions across domains. Led development of this metadata dictionary project as part of the California Digital Library's LEADS fellowship program.</p>
-                    <div class="project-links">
-                    <a href="https://yamz.net/" target="_blank">YAMZ.net</a>
+                        <h3>YAMZ</h3>
+                        <p>Yet Another Metadata Zoo - A community-driven vocabulary platform for creating and sharing
+                            metadata terms and definitions across domains. Led development of this metadata dictionary
+                            project as part of the California Digital Library's LEADS fellowship program.</p>
+                        <div class="project-links">
+                            <a href="https://yamz.net/" target="_blank">YAMZ.net</a>
+                        </div>
                     </div>
+
+                    <div class="project-card">
+                        <h3>ISO Automation System (2016-2020)</h3>
+                        <p>Developed software to automate ISO conformance task requirements and integrated legacy
+                            systems with .NET based solution for manufacturing quality control. Created integrations
+                            with QuickBooks, FedEx, and USPS APIs for seamless business operations.</p>
                     </div>
-                
-                <div class="project-card">
-                    <h3>ISO Automation System (2016-2020)</h3>
-                    <p>Developed software to automate ISO conformance task requirements and integrated legacy systems with .NET based solution for manufacturing quality control. Created integrations with QuickBooks, FedEx, and USPS APIs for seamless business operations.</p>
-                </div>
                 </div>
             </section>
 
