@@ -4,420 +4,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christopher Rauch - Professional Profile</title>
-    <meta name="description"
-        content="Christopher Rauch is a versatile technology professional with expertise in software development, information science, and legal background.">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&family=Source+Code+Pro&display=swap"
-        rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
+    <title>Christopher Rauch - PhD Candidate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: 'Roboto Serif', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: #fff;
+            color: #222;
+        }
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
+        header {
+            background: #f8f8f8;
+            padding: 2rem 1rem 1rem 1rem;
+            text-align: center;
+        }
 
-    <!-- Scripts -->
-    <script src="js/main.js" defer></script>
-    <script src="js/language.js" defer></script>
-    <!-- Bootstrap JS with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script>
-        // ...existing code...
-    </script>
+        nav {
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #222;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .social-links {
+            margin: 1.5rem 0 0 0;
+        }
+
+        .social-links a {
+            color: #111;
+            margin: 0 0.5rem;
+            font-size: 1.7rem;
+            display: inline-block;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #555;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 2rem 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 1rem 1rem 1rem;
+            font-size: 0.9rem;
+            color: #777;
+            background: #f8f8f8;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #222;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.2em;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 1.5em;
+            color: #444;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="py-3 mb-4 bg-dark">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-0">
-                <div class="container-fluid px-0">
-                    <a class="navbar-brand text-white fw-bold" href="index.html">Christopher Rauch</a>
-
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
-                        aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarMain">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                            <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-                            <li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
-                            <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                        </ul>
-                        <div class="language-toggle">
-                            <button data-language="en" class="btn btn-sm btn-light active me-2"
-                                onclick="switchLanguage('en')">EN</button>
-                            <a href="de/index.html" data-language="de" id="deLangBtn"
-                                class="btn btn-sm btn-outline-light">DE</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+    <header>
+        <h1>Christopher Rauch</h1>
+        <p id="tagline-en">PhD Candidate in Information Science | Juris Doctor (Rutgers Law) | LLM &amp; Rule-Based
+            Reasoning</p>
+        <p id="tagline-de" style="display:none;">Doktorand der Informationswissenschaft | Juris Doctor (Rutgers Law) |
+            LLM &amp; regelbasiertes Schließen</p>
+        <div style="margin: 0.5rem 0;">
+            <button id="lang-en" aria-label="English" style="font-weight:bold;">EN</button> |
+            <button id="lang-de" aria-label="Deutsch">DE</button>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-en">Home</a>
+            <a href="research.html" class="nav-en">Research</a>
+            <a href="publications.html" class="nav-en">Publications</a>
+            <a href="index.html" class="nav-de" style="display:none;">Startseite</a>
+            <a href="research.html" class="nav-de" style="display:none;">Forschung</a>
+            <a href="publications.html" class="nav-de" style="display:none;">Publikationen</a>
+        </nav>
+        <div class="social-links" style="display: flex; gap: 2.5em; justify-content: center; align-items: flex-start;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <a href="https://www.linkedin.com/in/chris2187/" target="_blank" aria-label="LinkedIn"
+                    title="linkedin.com/in/chris2187"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/chris2187/" target="_blank"
+                    style="font-size:0.95em; margin-top:0.3em; color:#111; text-decoration:none;">chris2187</a>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <a href="https://github.com/cr625" target="_blank" aria-label="GitHub" title="github.com/cr625"><i
+                        class="bi bi-github"></i></a>
+                <a href="https://github.com/cr625" target="_blank"
+                    style="font-size:0.95em; margin-top:0.3em; color:#111; text-decoration:none;">cr625</a>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <a href="https://orcid.org/0000-0003-2061-3413" target="_blank" rel="me noopener noreferrer"
+                    aria-label="ORCID" title="orcid.org/0000-0003-2061-3413">
+                    <img src="images/ORCID-iD_icon_BW_vector.svg" alt="ORCID iD icon"
+                        style="width: 1.1em; height: 1.1em; vertical-align: middle; display: inline-block;" />
+                </a>
+                <a href="https://orcid.org/0000-0003-2061-3413" target="_blank"
+                    style="font-size:0.95em; margin-top:0.3em; color:#111; text-decoration:none;">0000-0003-2061-3413</a>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en" target="_blank"
+                    aria-label="Google Scholar" title="scholar.google.com"><i class="bi bi-mortarboard-fill"></i></a>
+                <a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en" target="_blank"
+                    style="font-size:0.95em; margin-top:0.3em; color:#111; text-decoration:none;">Google Scholar</a>
+            </div>
         </div>
     </header>
-
-    <!-- Main Content -->
-    <main id="main-content" class="main-content">
-        <div class="container">
-            <!-- Profile Section -->
-            <section id="about" class="profile-section">
-                <img src="images/IMG_0053.jpg" alt="Christopher Rauch" class="profile-image">
-                <div class="profile-details">
-                    <h1 class="section-title">Christopher Rauch</h1>
-                    <p class="profile-subtitle">PhD Candidate in Information Science | LLM & Rule-Based Reasoning
-                        Research | Juris Doctor (Rutgers Law)</p>
-                    <p>Researcher exploring the integration of large language models with rule-based reasoning systems,
-                        applying software development expertise to information science challenges. My work bridges AI
-                        capabilities with structured knowledge representation, informed by principles of formal
-                        reasoning.</p>
-
-                    <p>My research focuses on ethical decision modeling with AI methods and domain-specific algorithmic
-                        decision-making. This interdisciplinary approach draws on both technical knowledge and ethical
-                        frameworks to address complex challenges in AI development and implementation.</p>
-
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/chris2187/" target="_blank"><i class="bi bi-linkedin"></i>
-                            LinkedIn</a>
-                        <a href="https://github.com/cr625" target="_blank"><i class="bi bi-github"></i> GitHub</a>
-                        <a href="https://orcid.org/0000-0003-2061-3413" target="_blank"><svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                                <path
-                                    d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z" />
-                            </svg>
-                            ORCID</a>
-                        <a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en" target="_blank"><i
-                                class="bi bi-mortarboard-fill"></i> Google Scholar</a>
-                    </div>
-
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <p><i class="bi bi-envelope-fill"></i> Email: <a
-                                href="mailto:christopher.rauch@ieee.org">christopher.rauch@ieee.org</a></p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Experience Section -->
-            <section id="experience" class="section">
-                <h2 class="section-title">Experience Highlights</h2>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2020 - Present</div>
-                    <h3 class="timeline-title">Research Fellow</h3>
-                    <div class="timeline-organization">Drexel University</div>
-                    <p>Contributing to DARPA "In the Moment" program focused on algorithmic decision-making in difficult
-                        scenarios. Developing output descriptions for AI decisions, integrating case-based reasoning
-                        systems with large language models, and assessing alignment between AI and human
-                        decision-makers.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2016 - 2020</div>
-                    <h3 class="timeline-title">ISO Consultant</h3>
-                    <div class="timeline-organization">American Precision Company</div>
-                    <p>Developed software to automate ISO conformance task requirements and integrated legacy systems
-                        with .NET based product and various APIs including QuickBooks, FedEx, and USPS.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2012 - 2014</div>
-                    <h3 class="timeline-title">Consultant</h3>
-                    <div class="timeline-organization">New York State Division of Homeland Security</div>
-                    <p>Developed user manuals and standard operating procedures for communications integration
-                        equipment.
-                        Worked with NYSDHS Office of Interoperable and Emergency Communications.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2010 - 2012</div>
-                    <h3 class="timeline-title">Consultant</h3>
-                    <div class="timeline-organization">Growth Transitions Inc (Maher and Maher)</div>
-                    <p>Enhanced ASP and ASP.NET legacy applications, improved MSQL database structure, and developed
-                        SharePoint web parts to integrate with C# ASP.NET content management system.</p>
-                </div>
-            </section>
-
-            <!-- Research Section -->
-            <section id="research" class="section">
-                <h2 class="section-title">Recent Research</h2>
-
-                <div class="publication">
-                    <h3 class="publication-title">Aligning to Human Decision-Makers in Military Medical Triage</h3>
-                    <p class="publication-authors">Molineaux, M., Weber, R. O., Floyd, M. W., Menager, D., Larue, O.,
-                        Addison, U., Kulhanek, R., Reifsnyder, N., Rauch, C., et al. (2024)</p>
-                    <p class="publication-source">Case-Based Reasoning Research and Development, 371-387</p>
-                    <a href="https://doi.org/10.1007/978-3-031-63646-2_24" class="publication-link"
-                        target="_blank">https://doi.org/10.1007/978-3-031-63646-2_24</a>
-                </div>
-
-                <div class="publication">
-                    <h3 class="publication-title">Counterfactual-Based Synthetic Case Generation</h3>
-                    <p class="publication-authors">Sen, A., Mainali, M., Rauch, C. B., Addison, U., Floyd, M. W., Goel,
-                        P., et al. (2024)</p>
-                    <p class="publication-source">Case-Based Reasoning Research and Development, 388-403</p>
-                    <a href="https://doi.org/10.1007/978-3-031-63646-2_25" class="publication-link"
-                        target="_blank">https://doi.org/10.1007/978-3-031-63646-2_25</a>
-                </div>
-
-                <div class="publication">
-                    <h3 class="publication-title">Beyond the 'Idols of the Marketplace': Managing Semantic Change in
-                        Research</h3>
-                    <p class="publication-authors">Rauch, C. B., Poole, A. H., Choi, H. W., & Kelly, M. (2024)</p>
-                    <p class="publication-source">Proceedings from the Document Academy, 11(2), 3</p>
-                    <a href="#" class="publication-link" target="_blank">Coming Soon</a>
-                </div>
-
-                <div class="publication">
-                    <h3 class="publication-title">Archiving and Replaying Current Web Advertisements: Challenges and
-                        Opportunities</h3>
-                    <p class="publication-authors">Reid, T., Poole, A. H., Choi, H. W., Rauch, C., Kelly, M., Nelson, M.
-                        L., & Weigle, M. C. (2025)</p>
-                    <p class="publication-source">arXiv preprint arXiv:2502.01525</p>
-                    <a href="https://arxiv.org/abs/2502.01525" class="publication-link"
-                        target="_blank">https://arxiv.org/abs/2502.01525</a>
-                </div>
-
-                <div class="publication">
-                    <h3 class="publication-title">Algorithmic Decision-Making in Difficult Scenarios</h3>
-                    <p class="publication-authors">Rauch, C. B., Addison, U., Floyd, M., Goel, P., Karneeb, J.,
-                        Kulhanek, R., et al. (2024)</p>
-                    <p class="publication-source">Proceedings of the AAAI Symposium Series, 3(1), 583-585</p>
-                    <a href="https://doi.org/10.1609/aaaiss.v3i1.31285" class="publication-link"
-                        target="_blank">https://doi.org/10.1609/aaaiss.v3i1.31285</a>
-                </div>
-            </section>
-
-            <!-- Skills Section -->
-            <section id="skills" class="section">
-                <h2 class="section-title">Key Skills</h2>
-
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Programming & Web</h3>
-                        <ul class="skill-list">
-                            <li>C#, Java, JavaScript, VB.NET</li>
-                            <li>Python, R, C++</li>
-                            <li>ASP.NET, HTML, CSS, XML/RDF</li>
-                            <li>SharePoint, Web Parts, JSON, XSLT</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Database & Integration</h3>
-                        <ul class="skill-list">
-                            <li>SQL Server, MS Access, FileMaker</li>
-                            <li>Google Maps API, Google Search API</li>
-                            <li>QuickBooks API, Adobe Connect</li>
-                            <li>FedEx/USPS APIs, Web Services</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Research Methods</h3>
-                        <ul class="skill-list">
-                            <li>Machine Learning</li>
-                            <li>Natural Language Processing</li>
-                            <li>Statistical Analysis (R)</li>
-                            <li>Case-Based Reasoning</li>
-                            <li>Agile Development Methodologies</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Additional Skills</h3>
-                        <ul class="skill-list">
-                            <li>German (Professional Working Proficiency)</li>
-                            <li>Project Management</li>
-                            <li>Legal Research and Writing</li>
-                            <li>Military Communications Systems</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="section">
-                <h2 class="section-title">Projects</h2>
-                <div class="projects-list">
-                    <div class="project-card">
-                        <h3>ProEthica</h3>
-                        <p>An LLM-based ethical decision-making framework incorporating domain ontologies and role-based
-                            ethics for precise reasoning about entities, relationships, and professional guidelines.</p>
-                        <p>Using domain ontologies to create structured knowledge, ProEthica evaluates decisions through
-                            professional roles bound by specific guidelines. It combines ontological reasoning with LLM
-                            capabilities via Model Context Protocol to ensure valid input/output structures and enhance
-                            ethical reasoning with structured domain knowledge.</p>
-                        <div class="project-links">
-                            <a href="https://proethica.org/" target="_blank">ProEthica.org</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>ITM (In The Moment)</h3>
-                        <p>Worked on Trusted Algorithmic Decision Maker (TAD) for the program.</p>
-                        <div class="project-links">
-                            <a href="https://www.darpa.mil/research/programs/in-the-moment" target="_blank">DARPA
-                                Project Page</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>YAMZ</h3>
-                        <p>Yet Another Metadata Zoo - A community-driven vocabulary platform for creating and sharing
-                            metadata terms and definitions across domains. Led development of this metadata dictionary
-                            project as part of the California Digital Library's LEADS fellowship program.</p>
-                        <div class="project-links">
-                            <a href="https://yamz.net/" target="_blank">YAMZ.net</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>ISO Automation System (2016-2020)</h3>
-                        <p>Developed software to automate ISO conformance task requirements and integrated legacy
-                            systems with .NET based solution for manufacturing quality control. Created integrations
-                            with QuickBooks, FedEx, and USPS APIs for seamless business operations.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CV Download Section -->
-            <section id="cv-downloads" class="download-section">
-                <h2 class="text-center">Download CV</h2>
-                <p class="text-center">Choose the CV version that best fits your needs</p> <!-- Updated text -->
-
-                <div class="download-cards">
-                    <div class="download-card">
-                        <i class="bi bi-file-earmark-text"></i>
-                        <h4>Master CV</h4>
-                        <p>Comprehensive CV with all experience and skills</p>
-                        <a href="downloads/christopher-rauch-cv.pdf"
-                            onclick="trackDownload('master', 'en')">Download</a>
-                    </div>
-
-                    <div class="download-card">
-                        <i class="bi bi-file-earmark-ruled"></i> <!-- Example icon, change if needed -->
-                        <h4>Europass CV</h4>
-                        <p>Standard European CV format</p>
-                        <a href="#" onclick="trackDownload('europass', 'en')">Coming Soon</a> <!-- Placeholder link -->
-                    </div>
-
-                    <div class="download-card">
-                        <i class="bi bi-journal-richtext"></i> <!-- Example icon, change if needed -->
-                        <h4>NSF CV</h4>
-                        <p>Format suitable for NSF proposals</p>
-                        <a href="#" onclick="trackDownload('nsf', 'en')">Coming Soon</a> <!-- Placeholder link -->
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="section">
-                <h2 class="section-title">Contact Me</h2>
-                <p>Feel free to reach out if you have any questions or would like to collaborate on research or
-                    projects.</p>
-
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class="bi bi-envelope-fill"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>Email: <a href="mailto:christopher.rauch@ieee.org">christopher.rauch@ieee.org</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="bi bi-linkedin"></i>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <p><a href="https://www.linkedin.com/in/chris2187/"
-                                    target="_blank">linkedin.com/in/chris2187</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="bi bi-github"></i>
-                        <div>
-                            <h3>GitHub</h3>
-                            <p><a href="https://github.com/cr625" target="_blank">github.com/cr625</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                            <path
-                                d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z" />
-                        </svg>
-                        <div>
-                            <h3>ORCID</h3>
-                            <p><a href="https://orcid.org/0000-0003-2061-3413" target="_blank">0000-0003-2061-3413</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="bi bi-mortarboard-fill"></i>
-                        <div>
-                            <h3>Google Scholar</h3>
-                            <p><a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en"
-                                    target="_blank">Google Scholar Profile</a></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <!-- Footer -->
+    <div class="container">
+        <h2 class="welcome-en">Welcome</h2>
+        <h2 class="welcome-de" style="display:none;">Willkommen</h2>
+        <p class="intro-en">I'm a PhD candidate at Drexel University, focusing on mechanistic interpretability of large
+            language models and ethical AI decision-making. I aim to bridge American and European approaches to AI
+            ethics, with upcoming research planned in Germany during 2025-2026. Explore my work and research
+            contributions below.</p>
+        <p class="intro-de" style="display:none;">Ich bin Doktorand an der Drexel University und forsche zur
+            mechanistischen Interpretierbarkeit großer Sprachmodelle sowie zu ethischen und rechtlichen Aspekten von
+            KI-Entscheidungen. Mein Ziel ist es, amerikanische und europäische Ansätze der KI-Ethik zu verbinden.
+            2025-2026 forsche ich in Deutschland. Mehr zu meiner Arbeit und Forschung unten.</p>
+        <h2 class="highlights-en">Research Highlights</h2>
+        <h2 class="highlights-de" style="display:none;">Forschungsschwerpunkte</h2>
+        <ul class="highlights-list-en">
+            <li>Mechanistic interpretability of large language models (LLMs)</li>
+            <li>Ethical and legal frameworks for AI decision-making</li>
+            <li>Comparative research: American and European approaches to AI ethics</li>
+            <li>Upcoming research residency in Germany (2025-2026)</li>
+            <li>Interdisciplinary background: Information Science &amp; Law</li>
+        </ul>
+        <ul class="highlights-list-de" style="display:none;">
+            <li>Mechanistische Interpretierbarkeit großer Sprachmodelle (LLMs)</li>
+            <li>Ethische und rechtliche Rahmenbedingungen für KI-Entscheidungen</li>
+            <li>Vergleichende Forschung: Amerikanische und europäische KI-Ethik</li>
+            <li>Forschungsaufenthalt in Deutschland (2025-2026)</li>
+            <li>Interdisziplinärer Hintergrund: Informationswissenschaft &amp; Recht</li>
+        </ul>
+    </div>
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-nav">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#research">Research</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/chris2187/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://github.com/cr625" target="_blank"><i class="bi bi-github"></i></a>
-                    <a href="https://orcid.org/0000-0003-2061-3413" target="_blank"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                            <path
-                                d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z" />
-                        </svg></a>
-                    <a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en" target="_blank"><i
-                            class="bi bi-mortarboard-fill"></i></a>
-                </div>
-            </div>
-
-            <div class="copyright">
-                <p>&copy; 2025 Christopher Rauch. Last updated April 26, 2025. All rights reserved.</p>
-            </div>
-        </div>
+        <p class="footer-en">&copy; 2025 Christopher Rauch</p>
+        <p class="footer-de" style="display:none;">&copy; 2025 Christopher Rauch</p>
     </footer>
+    <script>
+        const enBtn = document.getElementById('lang-en');
+        const deBtn = document.getElementById('lang-de');
+        enBtn.onclick = () => {
+            document.querySelectorAll('[class*="-en"]').forEach(e => e.style.display = '');
+            document.querySelectorAll('[class*="-de"]').forEach(e => e.style.display = 'none');
+            enBtn.style.fontWeight = 'bold';
+            deBtn.style.fontWeight = 'normal';
+        };
+        deBtn.onclick = () => {
+            document.querySelectorAll('[class*="-en"]').forEach(e => e.style.display = 'none');
+            document.querySelectorAll('[class*="-de"]').forEach(e => e.style.display = '');
+            enBtn.style.fontWeight = 'normal';
+            deBtn.style.fontWeight = 'bold';
+        };
+    </script>
 </body>
 
 </html>
