@@ -42,7 +42,8 @@
         }
 
         h1,
-        h2 {
+        h2,
+        h3 {
             color: #222;
             font-weight: 700;
         }
@@ -60,34 +61,146 @@
             color: #444;
         }
 
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+        }
+
         footer {
             text-align: center;
-            padding: 1.5rem 1rem 1rem 1rem;
+            padding: this1.5rem 1rem 1rem 1rem;
             font-size: 0.9rem;
             color: #777;
             background: #f8f8f8;
+        }
+
+        .project-links {
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+
+        .project-links li {
+            margin-bottom: 0.8em;
+        }
+
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Christopher Rauch</h1>
-        <p>PhD Candidate in Information Science | Juris Doctor (Rutgers Law) | LLM &amp; Rule-Based Reasoning</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="research.html">Research</a>
-            <a href="publications.html">Publications</a>
-        </nav>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="display: flex; align-items: flex-start; gap: 1rem; justify-content: center;">
+                <img src="images/IMG_0053_head.jpg" alt="Christopher Rauch"
+                    style="width: 90px; height: 90px; object-fit: cover; object-position: 50% 20%; border-radius: 50%; box-shadow: 0 2px 8px #ccc; margin-bottom: -0.5em;" />
+                <div
+                    style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;">
+                    <h1 style="margin-bottom: 0.2em;">Christopher Rauch</h1>
+                    <p id="tagline-en" style="margin-top: 0.7em;">PhD Candidate in Information Science | Juris Doctor
+                        (Rutgers Law) | LLM &amp; Rule-Based Reasoning</p>
+                    <p id="tagline-de" style="display:none; margin-top: 0.7em;">Doktorand der Informationswissenschaft |
+                        Juris Doctor (Rutgers Law) | LLM &amp; regelbasiertes Schließen</p>
+                </div>
+            </div>
+            <div style="margin: 0.5rem 0;">
+                <button id="lang-en" aria-label="English" style="font-weight:bold;">EN</button> |
+                <button id="lang-de" aria-label="Deutsch">DE</button>
+            </div>
+            <nav>
+                <a href="index.html" class="nav-en">Home</a>
+                <a href="research.html" class="nav-en">Research</a>
+                <a href="publications.html" class="nav-en">Publications</a>
+                <a href="index.html" class="nav-de" style="display:none;">Startseite</a>
+                <a href="research.html" class="nav-de" style="display:none;">Forschung</a>
+                <a href="publications.html" class="nav-de" style="display:none;">Publikationen</a>
+            </nav>
+        </div>
     </header>
     <div class="container">
-        <h2>Research</h2>
-        <p>This page is under construction. Please check back soon for more information about my research projects and
-            interests.</p>
+        <div class="research-en">
+            <h2>Research</h2>
+            <p>My research focuses on mechanistic interpretability of large language models and ethical AI decision-making. I aim to bridge American and European approaches to AI ethics, with upcoming research planned in Germany during 2025-2026.</p>
+            
+            <p>With an interdisciplinary background spanning information science and law, my work explores how we can better understand the internal mechanisms of large language models while developing ethical frameworks for AI decision-making that are transparent and interpretable.</p>
+
+            <h3>Current Research Focus</h3>
+            <ul>
+                <li>Developing methods to understand how large language models (LLMs) internally represent and process information</li>
+                <li>Creating frameworks that integrate ethical considerations into AI systems</li>
+                <li>Comparing American and European regulatory approaches to AI governance</li>
+                <li>Building systems that generate human-interpretable explanations for AI decisions</li>
+            </ul>
+
+            <h3>Project Affiliations</h3>
+            <ul class="project-links">
+                <li><a href="https://proethica.org" target="_blank">ProEthica</a> - Advancing ethical frameworks for AI systems</li>
+                <li><a href="https://a-proxy.org" target="_blank">A-Proxy.org</a> - Research in algorithmic proxies and decision-making</li>
+                <li><a href="https://yamz.net" target="_blank">YAMZ</a> - Collaborative metadictionary for information science terminology</li>
+                <li><a href="https://www.darpa.mil/program/intelligent-truth-maintenance" target="_blank">DARPA ITM Project</a> - Intelligent Truth Maintenance research</li>
+            </ul>
+
+            <h3>Upcoming Work</h3>
+            <p>During 2025-2026, I will be conducting research in Germany, focusing on integrating European and American approaches to AI ethics and mechanistic interpretability. This work will build on my dissertation research on attribution graphs and circuit tracing in large language models.</p>
+        </div>
+
+        <div class="research-de" style="display:none;">
+            <h2>Forschung</h2>
+            <p>Meine Forschung konzentriert sich auf die mechanistische Interpretierbarkeit großer Sprachmodelle und ethische KI-Entscheidungsfindung. Mein Ziel ist es, amerikanische und europäische Ansätze der KI-Ethik zu verbinden, mit geplanter Forschung in Deutschland während 2025-2026.</p>
+            
+            <p>Mit einem interdisziplinären Hintergrund in Informationswissenschaft und Rechtswissenschaft untersucht meine Arbeit, wie wir die internen Mechanismen großer Sprachmodelle besser verstehen können, während wir ethische Rahmenbedingungen für KI-Entscheidungen entwickeln, die transparent und interpretierbar sind.</p>
+
+            <h3>Aktuelle Forschungsschwerpunkte</h3>
+            <ul>
+                <li>Entwicklung von Methoden zum Verständnis, wie große Sprachmodelle (LLMs) Informationen intern darstellen und verarbeiten</li>
+                <li>Schaffung von Frameworks, die ethische Überlegungen in KI-Systeme integrieren</li>
+                <li>Vergleich amerikanischer und europäischer regulatorischer Ansätze zur KI-Governance</li>
+                <li>Aufbau von Systemen, die menschlich interpretierbare Erklärungen für KI-Entscheidungen generieren</li>
+            </ul>
+
+            <h3>Projekt-Zugehörigkeiten</h3>
+            <ul class="project-links">
+                <li><a href="https://proethica.org" target="_blank">ProEthica</a> - Förderung ethischer Rahmenbedingungen für KI-Systeme</li>
+                <li><a href="https://a-proxy.org" target="_blank">A-Proxy.org</a> - Forschung zu algorithmischen Proxies und Entscheidungsfindung</li>
+                <li><a href="https://yamz.net" target="_blank">YAMZ</a> - Kollaboratives Metawörterbuch für informationswissenschaftliche Terminologie</li>
+                <li><a href="https://www.darpa.mil/program/intelligent-truth-maintenance" target="_blank">DARPA ITM Projekt</a> - Forschung zur intelligenten Wahrheitserhaltung</li>
+            </ul>
+
+            <h3>Zukünftige Arbeit</h3>
+            <p>Während 2025-2026 werde ich in Deutschland forschen und mich auf die Integration europäischer und amerikanischer Ansätze zur KI-Ethik und mechanistischen Interpretierbarkeit konzentrieren. Diese Arbeit baut auf meiner Dissertationsforschung zu Attributionsgraphen und Circuit-Tracing in großen Sprachmodellen auf.</p>
+        </div>
     </div>
     <footer>
-        <p>&copy; 2025 Christopher Rauch</p>
+        <p class="footer-en">&copy; 2025 Christopher Rauch</p>
+        <p class="footer-de" style="display:none;">&copy; 2025 Christopher Rauch</p>
     </footer>
+    <script>
+        const enBtn = document.getElementById('lang-en');
+        const deBtn = document.getElementById('lang-de');
+        enBtn.onclick = () => {
+            document.querySelectorAll('[class*="-en"]').forEach(e => e.style.display = '');
+            document.querySelectorAll('[class*="-de"]').forEach(e => e.style.display = 'none');
+            enBtn.style.fontWeight = 'bold';
+            deBtn.style.fontWeight = 'normal';
+        };
+        deBtn.onclick = () => {
+            document.querySelectorAll('[class*="-en"]').forEach(e => e.style.display = 'none');
+            document.querySelectorAll('[class*="-de"]').forEach(e => e.style.display = '');
+            enBtn.style.fontWeight = 'normal';
+            deBtn.style.fontWeight = 'bold';
+        };
+        // Automatically switch to German if accessed via christopher-rauch.de
+        if (window.location.hostname === 'christopher-rauch.de') {
+            deBtn.onclick();
+        }
+    </script>
 </body>
 
 </html>
