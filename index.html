@@ -206,6 +206,10 @@
             enBtn.style.fontWeight = 'normal';
             deBtn.style.fontWeight = 'bold';
         };
+        // Automatically switch to German if accessed via christopher-rauch.de
+        if (window.location.hostname === 'christopher-rauch.de') {
+            deBtn.onclick();
+        }
     </script>
 </body>
 
