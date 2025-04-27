@@ -8,6 +8,9 @@
     <meta name="description"
         content="Christopher Rauch is a versatile technology professional with expertise in software development, information science, and legal background.">
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +18,8 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&family=Source+Code+Pro&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
@@ -26,123 +29,81 @@
     <!-- Scripts -->
     <script src="js/main.js" defer></script>
     <script src="js/language.js" defer></script>
+    <!-- Bootstrap JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
     <script>
-        // Hamburger menu toggle logic
-        document.addEventListener('DOMContentLoaded', function () {
-            var mobileToggle = document.getElementById('mobileMenuToggle');
-            var mobileNav = document.getElementById('mobileNav');
-            var desktopNav = document.getElementById('desktopNav');
-            mobileToggle.addEventListener('click', function () {
-                if (mobileNav.style.display === 'none' || mobileNav.style.display === '') {
-                    mobileNav.style.display = 'block';
-                    desktopNav.style.display = 'none';
-                } else {
-                    mobileNav.style.display = 'none';
-                    desktopNav.style.display = '';
-                }
-            });
-            // Optional: Hide mobile nav on resize to desktop
-            window.addEventListener('resize', function () {
-                if (window.innerWidth > 900) {
-                    mobileNav.style.display = 'none';
-                    desktopNav.style.display = '';
-                }
-            });
-        });
-
-        // Dummy language switcher for EN (if needed)
-        function switchLanguage(lang) {
-            if (lang === 'en') {
-                window.location.href = 'index.html';
-            }
-        }
+        // ...existing code...
     </script>
 </head>
 
 <body>
     <!-- Header -->
-    <header>
+    <header class="py-3 mb-4 bg-dark">
         <div class="container">
-            <div class="header-content">
-                <div class="site-title">
-                    <a href="index.html">Christopher Rauch</a>
-                </div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-0">
+                <div class="container-fluid px-0">
+                    <a class="navbar-brand text-white fw-bold" href="index.html">Christopher Rauch</a>
 
-                <!-- Mobile Menu Toggle -->
-                <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <i class="fas fa-bars"></i>
-                </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                        aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <!-- Desktop Navigation -->
-                <nav class="desktop-nav" id="desktopNav">
-                    <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#research">Research</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <div class="language-toggle">
-                        <button data-language="en" class="active" onclick="switchLanguage('en')">EN</button>
-                        <a href="de/index.html" data-language="de" id="deLangBtn">DE</a>
+                    <div class="collapse navbar-collapse" id="navbarMain">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                            <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                            <li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
+                            <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                        </ul>
+                        <div class="language-toggle">
+                            <button data-language="en" class="btn btn-sm btn-light active me-2"
+                                onclick="switchLanguage('en')">EN</button>
+                            <a href="de/index.html" data-language="de" id="deLangBtn"
+                                class="btn btn-sm btn-outline-light">DE</a>
+                        </div>
                     </div>
-                </nav>
-
-                <!-- Mobile Navigation (hidden by default) -->
-                <nav class="mobile-nav" id="mobileNav" style="display:none;">
-                    <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#research">Research</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li>
-                            <div class="language-toggle">
-                                <button data-language="en" class="active" onclick="switchLanguage('en')">EN</button>
-                                <a href="de/index.html" data-language="de" id="deLangBtnMobile">DE</a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+                </div>
+            </nav>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main id="main-content" class="main-content">
         <div class="container">
             <!-- Profile Section -->
             <section id="about" class="profile-section">
                 <img src="images/IMG_0053.jpg" alt="Christopher Rauch" class="profile-image">
                 <div class="profile-details">
                     <h1 class="section-title">Christopher Rauch</h1>
-                    <p class="profile-subtitle">PhD Candidate in Information Science | Software Developer | Legal
-                        Background</p>
-                    <p>Versatile technology professional with expertise in software development, information science,
-                        and law. Combining advanced technical skills with research experience in algorithmic
-                        decision-making, metadata systems, and ethical AI.</p>
+                    <p class="profile-subtitle">PhD Candidate in Information Science | LLM & Rule-Based Reasoning
+                        Research | Juris Doctor (Rutgers Law School)</p>
+                    <p>Researcher exploring the integration of large language models with rule-based reasoning systems,
+                        applying software development expertise to information science challenges. My work bridges AI
+                        capabilities with structured knowledge representation, informed by principles of formal
+                        reasoning.</p>
 
                     <p>My research focuses on ethical decision modeling with AI methods and domain-specific algorithmic
-                        decision-making. With backgrounds in software development, information science, and law, I bring
-                        a multidisciplinary perspective to technology challenges.</p>
+                        decision-making. This interdisciplinary approach draws on both technical knowledge and ethical
+                        frameworks to address complex challenges in AI development and implementation.</p>
 
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/chris2187/" target="_blank"><i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/chris2187/" target="_blank"><i class="bi bi-linkedin"></i>
                             LinkedIn</a>
-                        <a href="https://github.com/cr625" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://orcid.org/0000-0003-2061-3413" target="_blank"><i class="fab fa-orcid"></i>
+                        <a href="https://github.com/cr625" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+                        <a href="https://orcid.org/0000-0003-2061-3413" target="_blank"><i
+                                class="bi bi-journal-code"></i>
                             ORCID</a>
                         <a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en" target="_blank"><i
-                                class="fas fa-graduation-cap"></i> Google Scholar</a>
+                                class="bi bi-mortarboard-fill"></i> Google Scholar</a>
                     </div>
 
                     <div class="contact-info">
                         <h3>Contact Information</h3>
-                        <p><i class="fas fa-envelope"></i> Email: <a
+                        <p><i class="bi bi-envelope-fill"></i> Email: <a
                                 href="mailto:christopher.rauch@ieee.org">christopher.rauch@ieee.org</a></p>
                     </div>
                 </div>
@@ -338,7 +299,7 @@
 
                 <div class="download-cards">
                     <div class="download-card">
-                        <i class="fas fa-file-alt"></i>
+                        <i class="bi bi-file-earmark-text"></i>
                         <h4>Master CV</h4>
                         <p>Comprehensive CV with all experience and skills</p>
                         <a href="downloads/christopher-rauch-cv.pdf"
@@ -346,7 +307,7 @@
                     </div>
 
                     <div class="download-card">
-                        <i class="fas fa-laptop-code"></i>
+                        <i class="bi bi-laptop"></i>
                         <h4>Technical CV</h4>
                         <p>IT and software development focused</p>
                         <a href="downloads/christopher-rauch-technical-cv.pdf"
@@ -354,7 +315,7 @@
                     </div>
 
                     <div class="download-card">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="bi bi-mortarboard-fill"></i>
                         <h4>Academic CV</h4>
                         <p>Research and teaching focused</p>
                         <a href="downloads/christopher-rauch-academic-cv.pdf"
@@ -371,7 +332,7 @@
 
                 <div class="contact-details">
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
+                        <i class="bi bi-envelope-fill"></i>
                         <div>
                             <h3>Email</h3>
                             <p>Email: <a href="mailto:christopher.rauch@ieee.org">christopher.rauch@ieee.org</a></p>
@@ -379,7 +340,7 @@
                     </div>
 
                     <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
+                        <i class="bi bi-linkedin"></i>
                         <div>
                             <h3>LinkedIn</h3>
                             <p><a href="https://www.linkedin.com/in/chris2187/"
@@ -388,7 +349,7 @@
                     </div>
 
                     <div class="contact-item">
-                        <i class="fab fa-github"></i>
+                        <i class="bi bi-github"></i>
                         <div>
                             <h3>GitHub</h3>
                             <p><a href="https://github.com/cr625" target="_blank">github.com/cr625</a></p>
@@ -396,7 +357,7 @@
                     </div>
 
                     <div class="contact-item">
-                        <i class="fab fa-orcid"></i>
+                        <i class="bi bi-journal-code"></i>
                         <div>
                             <h3>ORCID</h3>
                             <p><a href="https://orcid.org/0000-0003-2061-3413" target="_blank">0000-0003-2061-3413</a>
@@ -405,7 +366,7 @@
                     </div>
 
                     <div class="contact-item">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="bi bi-mortarboard-fill"></i>
                         <div>
                             <h3>Google Scholar</h3>
                             <p><a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en"
@@ -434,11 +395,12 @@
                 </div>
 
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/chris2187/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/cr625" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://orcid.org/0000-0003-2061-3413" target="_blank"><i class="fab fa-orcid"></i></a>
+                    <a href="https://www.linkedin.com/in/chris2187/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/cr625" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="https://orcid.org/0000-0003-2061-3413" target="_blank"><i
+                            class="bi bi-journal-code"></i></a>
                     <a href="https://scholar.google.com/citations?user=oYx36VwAAAAJ&hl=en" target="_blank"><i
-                            class="fas fa-graduation-cap"></i></a>
+                            class="bi bi-mortarboard-fill"></i></a>
                 </div>
             </div>
 

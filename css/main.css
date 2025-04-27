@@ -1,0 +1,17 @@
+/* 
+ * Main CSS file that imports all modular CSS files
+ * Author: Christopher Rauch
+ * Created: April 2025
+ */
+
+/* Import base styles: variables, reset, typography */
+@import 'base.css';
+
+/* Import layout styles: header, footer, grid, sections */
+@import 'layout.css';
+
+/* Import component styles: buttons, cards, widgets */
+@import 'components.css';
+
+/* Import responsive styles for different devices */
+@import 'responsive.css';

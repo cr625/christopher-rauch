@@ -2,9 +2,10 @@
  * Responsive Design Stylesheet for christopher-rauch.info
  * Author: Christopher Rauch
  * Created: April 2025
+ * Updated: April 2025
  */
 
-/* Small devices (landscape phones, 576px and up) */
+/* Small devices (phones, 576px and down) */
 @media (max-width: 576px) {
   html {
     font-size: 14px;
@@ -22,31 +23,71 @@
     font-size: 1.5rem;
   }
   
-  .header-content {
-    flex-direction: column;
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .profile-section, .profile-details {
     text-align: center;
   }
   
-  nav ul {
-    margin-top: 1rem;
+  .social-links {
     justify-content: center;
   }
-  
-  nav li {
-    margin: 0 0.5rem;
+}
+
+/* Small to medium devices (phones to tablets) */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   
-  .profile, .profile-section {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .desktop-nav {
+    display: none;
+  }
+  
+  .profile-section {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
   
   .profile-image {
-    margin-bottom: 1.5rem;
+    margin-right: 0;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .profile-subtitle {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item::before {
+    left: -7px;
+    width: 12px;
+    height: 12px;
   }
   
   .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-list {
     grid-template-columns: 1fr;
   }
   
@@ -56,112 +97,96 @@
   
   .footer-content {
     flex-direction: column;
-  }
-  
-  .footer-nav {
-    margin-top: 1rem;
-  }
-  
-  .social-links {
-    margin-top: 1rem;
-  }
-
-  .section-title::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 577px) and (max-width: 768px) {
-  .profile, .profile-section {
-    flex-direction: column;
-    align-items: center;
     text-align: center;
   }
   
-  .profile-image {
-    margin-bottom: 1.5rem;
-  }
-  
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .download-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .section-title::after {
-    left: 50%;
-    transform: translateX(-50%);
+  .footer-nav ul {
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
   }
 }
 
-/* Large devices (desktops, 992px and up) */
+/* Medium devices (tablets, 768px to 992px) */
 @media (min-width: 769px) and (max-width: 992px) {
+  .profile-section {
+    flex-direction: row;
+  }
+  
+  .profile-image {
+    margin-right: var(--spacing-lg);
+    margin-bottom: 0;
+  }
+  
   .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .projects-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .download-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .two-column-layout {
+    flex-direction: row;
+  }
+  
+  .left-column {
+    width: 35%;
+  }
+  
+  .right-column {
+    width: 65%;
+  }
+}
+
+/* Large devices (desktops, 993px and up) */
+@media (min-width: 993px) {
+  .profile-section {
+    flex-direction: row;
+  }
+  
+  .profile-image {
+    margin-right: var(--spacing-lg);
+    margin-bottom: 0;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .projects-list {
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .download-cards {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-/* Mobile Navigation */
-@media (max-width: 768px) {
-  .mobile-menu-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: white;
+  
+  .two-column-layout {
+    flex-direction: row;
   }
   
-  nav.desktop-nav {
-    display: none;
+  .left-column {
+    width: 30%;
   }
   
-  nav.mobile-nav {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
-    z-index: 1000;
-    padding: 2rem;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-  }
-  
-  nav.mobile-nav.active {
-    transform: translateX(0);
-  }
-  
-  nav.mobile-nav ul {
-    flex-direction: column;
-  }
-  
-  nav.mobile-nav li {
-    margin: 0.5rem 0;
-  }
-  
-  .mobile-nav-close {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
+  .right-column {
+    width: 70%;
   }
 }
 
-/* Larger desktop screens (1200px and up) */
+/* Extra-large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+  
+  .projects-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
   }
 }
 
@@ -179,8 +204,19 @@
     text-decoration: underline;
   }
   
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.9em;
+  }
+  
   header, footer, nav, .download-section {
     display: none;
+  }
+  
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -203,7 +239,27 @@
     padding: 0;
   }
   
-  main {
-    padding: 0;
+  .profile-section {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .card, .project-card, .timeline-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .section {
+    page-break-before: auto;
+  }
+  
+  /* Add page breaks where appropriate */
+  .section:not(:first-child) {
+    page-break-before: always;
   }
 }
