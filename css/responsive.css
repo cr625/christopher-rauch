@@ -1,7 +1,6 @@
 /* 
  * Responsive Design Stylesheet for christopher-rauch.info
  * Author: Christopher Rauch
- * Created: April 2025
  * Updated: April 2025
  */
 
@@ -11,17 +10,9 @@
     font-size: 14px;
   }
   
-  h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.75rem;
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-  }
+  h1 { font-size: a2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
   
   .container {
     padding: 0 var(--spacing-sm);
@@ -42,21 +33,7 @@
 }
 
 /* Small to medium devices (phones to tablets) */
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .mobile-menu-toggle {
-    display: block;
-  }
-  
-  .desktop-nav {
-    display: none;
-  }
-  
+@media (min-width: 577px) and (max-width: 768px) {
   .profile-section {
     flex-direction: column;
     align-items: center;
@@ -68,29 +45,8 @@
     margin-bottom: var(--spacing-lg);
   }
   
-  .profile-subtitle {
-    padding: 0 var(--spacing-sm);
-  }
-  
-  .section-title::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .timeline-item::before {
-    left: -7px;
-    width: 12px;
-    height: 12px;
-  }
-  
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .projects-list {
-    grid-template-columns: 1fr;
-  }
-  
+  .skills-grid, 
+  .projects-list, 
   .download-cards {
     grid-template-columns: 1fr;
   }
@@ -106,10 +62,11 @@
   }
 }
 
-/* Medium devices (tablets, 768px to 992px) */
-@media (min-width: 769px) and (max-width: 992px) {
+/* Medium devices (tablets, 769px to 992px) */
+@media (min-width: 769px) {
   .profile-section {
     flex-direction: row;
+    align-items: flex-start;
   }
   
   .profile-image {
@@ -119,42 +76,6 @@
   
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .projects-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .download-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .two-column-layout {
-    flex-direction: row;
-  }
-  
-  .left-column {
-    width: 35%;
-  }
-  
-  .right-column {
-    width: 65%;
-  }
-}
-
-/* Large devices (desktops, 993px and up) */
-@media (min-width: 993px) {
-  .profile-section {
-    flex-direction: row;
-  }
-  
-  .profile-image {
-    margin-right: var(--spacing-lg);
-    margin-bottom: 0;
-  }
-  
-  .skills-grid {
-    grid-template-columns: repeat(4, 1fr);
   }
   
   .projects-list {
@@ -165,28 +86,19 @@
     grid-template-columns: repeat(3, 1fr);
   }
   
-  .two-column-layout {
-    flex-direction: row;
-  }
-  
-  .left-column {
-    width: 30%;
-  }
-  
-  .right-column {
-    width: 70%;
+  .contact-details {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Extra-large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
+/* Large devices (desktops, 993px and up) */
+@media (min-width: 993px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
   
   .projects-list {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-xl);
   }
 }
 
@@ -234,31 +146,10 @@
     widows: 3;
   }
   
-  .container {
-    max-width: 100%;
-    padding: 0;
-  }
-  
-  .profile-section {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .profile-image {
-    width: 150px;
-    height: 150px;
-  }
-  
-  .card, .project-card, .timeline-item {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-  
   .section {
     page-break-before: auto;
   }
   
-  /* Add page breaks where appropriate */
   .section:not(:first-child) {
     page-break-before: always;
   }
