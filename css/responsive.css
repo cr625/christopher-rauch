@@ -66,12 +66,28 @@
 @media (min-width: 769px) {
   .profile-section {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: flex-start; /* Reverted from center */
+    flex-wrap: nowrap; /* Reverted from wrap */
+  }
+
+  .profile-details {
+    width: auto; /* Reverted from 100% */
+    order: 0; /* Reverted from -1 */
+    text-align: left; /* Reverted from center */
+    margin-bottom: 0; /* Reverted from var(--spacing-lg) */
   }
   
   .profile-image {
-    margin-right: var(--spacing-lg);
+    width: 180px; /* Keep reduced size */
+    height: 180px; /* Keep reduced size */
+    margin-right: var(--spacing-lg); /* Restore right margin */
+    margin-left: 0; /* Reverted from auto */
+    margin-right: var(--spacing-lg); /* Reverted from auto */
     margin-bottom: 0;
+  }
+
+  .profile-subtitle {
+      font-size: 1.1rem; /* Restore reduced font size */
   }
   
   .skills-grid {
